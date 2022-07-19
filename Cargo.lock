@@ -3,5 +3,13 @@
 version = 3
 
 [[package]]
+name = "rcli_lib"
+version = "0.1.0"
+source = "git+https://github.com/lucasTanne/rcli?branch=lib#8c5679184b89fab3f100e1ab11e319d136fdd4df"
+
+[[package]]
 name = "soundcloud-player"
 version = "0.1.0"
+dependencies = [
+ "rcli_lib",
+]

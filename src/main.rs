@@ -1,3 +1,11 @@
+use std::{env, process};
+use rcli_lib::parser as parser;
 fn main() {
-    println!("Hello, world!");
+    let args: Vec<String> = env::args().collect();
+    println!("{:?}", args);
+
+    parser::Parser::new(&args).unwrap_or_else(| err | {
+        println!("{}", err);
+        process::exit(1);
+    });
 }
